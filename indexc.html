@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="cal.css">
+    <script>
+        let currentDisplay='0';
+        let firstNumber=null;
+        let operation=null;
+        let shouldResetDisplay=false;
+
+        function updateDisplay() {
+            document.getElementById('display').textContent=currentDisplay;
+        }
+
+        function appendNumber(num) {
+            if (shouldResetDisplay) {
+                currentDisplay=num;
+                shouldResetDisplay=false;
+            } else {
+                if (currentDisplay === '0' && num !== '.') {
+                    currentDisplay=num;
+                } else {
+                    currentDisplay+=num;
+                }
+            }
+            updateDisplay();
+        }
+
+        function clearDisplay() {
+            currentDisplay='0';
+            firstNumber=null;
+            operation=null;
+            shouldResetDisplay=false;
+            updateDisplay();
+        }
+
+        function deleteLast() {
+            if(currentDisplay.length>1) {
+                current.Display=currentDisplay.slice(0, -1);
+            } else {
+                currentDisplay='0';
+            }
+            updateDisplay();
+        }
+
+        function setOperation(op) {
+            if(firstNumber !== null && operation !== null && !shouldResetDisplay) {
+            calculate();
+        }
+        firstNumber=parseFloat(currentdisplay);
+        operation=op;
+        shouldResetDisplay=true;
+    }
+
+    function addition(a,b) {
+        return a+b;
+    }
+
+    function subtract(a,b) {
+        return a-b;
+    }
+
+    function multiply(a,b) {
+        return a*b;
+    }
+
+    function divide(a,b) {
+        id(b===0) {
+            return 'Error';
+        }
+        return a/b;
+    }
+    function calculate() {
+        if(firstNumber === null || operation === null) {
+            return;
+        }
+
+        let secondNumber=parseFloat(currentDisplay);
+        let result;
+
+        if(operatio==='add') {
+            result=add(firstNumber, secondNumber);
+        } else if(operation === 'subtract') {
+            result = subtract(firstNumber, secondNumber);
+        } else if(operation === 'multiply') {
+            result = multiply(firstNumber, secondNumber);
+        } else if(oeration === 'divide') {
+            rsult= divide(firstNumber, secondNumber);s
+        }
+
+        if (result==='Error') {
+            currentDisplay='Error';
+        } else {
+            currentdisplay=result.toString();
+        }
+
+        firstNumber=null;
+        operaion=null;
+        shouldresetDisplay=true;
+        updateDisplay();
+    }
+    </script>
+</head>
+<body>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            font-family: Arial, sans-serif;
+        }
+
+        .calculator {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .display {
+            width:240px;
+            height:60px;
+            background: #222;
+            color:#fff;
+            font-size: 28px;
+            text-align: right;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            word-wrap: break-word;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        button {
+            width: 60px;
+            height: 60px;
+            font-size: 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            background: #f0f0f0;
+            transition: all 0.2s;
+        }
+
+        button:hover {
+            background:#e0e0e0;
+            transform: scale(1.05);
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        .operator {
+            background: #ff9500;
+            color: white;
+        }
+
+        .operator:hover {
+            background: #e08500;
+        }
+
+        .clear {
+            background: #ff3b30;
+            color: white;
+        }
+    </style>
+    <div class="calculator">
+        <div class="display" id="display">0</div>
+        <div class="buttons">
+            <button class="clear" onclick="clearDisplay()">C</button>
+            <button onclick="deleteLast()">DEL</button>
+            <button class="operator" onclick="setOperation('divide')">/</button>
+            <button class="operator" onclick="setOperator('multiply')">*</button>
+
+            <button onclick="appenNumber('7')">7</button>
+            <button onclick="appenNumber('8')">8</button>
+            <button onclick="appenNumber('9')">9</button>
+            <button class="operator" onclick="setOperation('subtract')">-</button>
+
+            <button onclick="appenNumber('4')">4</button>
+            <button onclick="appenNumber('5')">5</button>
+            <button onclick="appenNumber('6')">6</button>
+            <button class="operator" onclick="setOperation('addition')">+</button>
+
+            <button onclick="appenNumber('1')">1</button>
+            <button onclick="appenNumber('2')">2</button>
+            <button onclick="appenNumber('3')">3</button>
+            <button class="equals" onclick="calculate()" style="grid-row : span 2;">=</button>
+
+            <button onclick="appendNumber('0')" style="grid-column: span 2;">0</button>
+            <button onclick="appendNumber('.')">.</button>
+        </div>
+    </div>
+    <script src="cal.js"></script>
+</body>
+</html>

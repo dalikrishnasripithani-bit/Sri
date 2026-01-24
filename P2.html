@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Explore India - Travel & Tourism</title>
+
+    <!-- Internal CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f6f8;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #0066cc;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Table of Contents */
+        .toc {
+            background-color: #ffffff;
+            padding: 20px;
+            margin: 20px auto;
+            width: 90%;
+            border-radius: 8px;
+        }
+
+        .toc h2 {
+            margin-top: 0;
+        }
+
+        .toc a {
+            display: block;
+            text-decoration: none;
+            color: #0066cc;
+            margin: 5px 0;
+        }
+
+        .toc a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            padding: 30px;
+            margin: 20px auto;
+            width: 90%;
+            background-color: white;
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        /* Gallery Grid */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        /* Large Image Display */
+        .large-image {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .large-image img {
+            width: 70%;
+            max-width: 600px;
+            border-radius: 10px;
+        }
+
+        .caption {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #555;
+        }
+
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>🌍 Explore India</h1>
+        <p>Your Guide to Amazing Travel Destinations</p>
+    </header>
+
+    <!-- Table of Contents -->
+    <div class="toc">
+        <h2>📌 Table of Contents</h2>
+        <a href="#about">About Us</a>
+        <a href="#destinations">Popular Destinations</a>
+        <a href="#packages">Tour Packages</a>
+        <a href="#gallery">Image Gallery</a>
+        <a href="#contact">Contact Us</a>
+    </div>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>🏖 About Us</h2>
+        <p>
+            Explore India is your trusted companion for discovering the beauty, culture, and diversity of India. From serene beaches and majestic mountains to historic and vibrant cities, we bring you closer to destinations that make India truly incredible.</p>
+        <p>Our mission is to inspire travelers by providing reliable travel information, hidden gems, and practical tips that help you plan unforgettable journeys. Whether you’re traveling with friends, family, or solo, we guide you to experiences that match your interests and budget. At Explore India, we believe travel is not just about visiting places—it’s about experiencing culture, creating memories, and connecting with people. Let us help you explore India, one destination at a time.</p>
+    </section>
+
+    <!-- Destinations Section -->
+    <section id="destinations">
+        <h2>📍 Popular Destinations</h2>
+        <ul>
+            <li>Goa – Beaches & Nightlife</li>
+            <li>Kerala – Backwaters & Nature</li>
+            <li>Jaipur – Royal Heritage</li>
+            <li>Manali – Mountains & Adventure</li>
+        </ul>
+    </section>
+
+    <!-- Packages Section -->
+    <section id="packages">
+        <h2>🎒 Tour Packages</h2>
+        <p>
+            At Explore India, we offer carefully designed tour packages that help you experience the best of India with comfort, safety, and convenience. Our tour packages cover a wide range of destinations, from peaceful hill stations and scenic beaches to cultural heritage sites and vibrant cities. Each package is created to suit different travel needs, whether you are planning a trip with friends, family, or traveling solo. We focus on providing affordable prices, well-planned itineraries, and memorable travel experiences.<br>
+            We offer affordable travel packages including transport, accommodation, sightseeing, and food for individuals and families. With Explore India, you can relax and enjoy your journey while we take care of the planning. Discover India in a simple, safe, and enjoyable way with our trusted tour packages.
+        </p>
+    </section>
+
+    <!-- Image Gallery Section -->
+    <section id="gallery">
+        <h2>🖼 Travel Gallery</h2>
+
+        <div class="gallery">
+            <a href="#img1">
+                <img src="images/goa.jpg" alt="Goa Beach">
+            </a>
+            <a href="#img2">
+                <img src="images/kerala.jpg" alt="Kerala Backwaters">
+            </a>
+            <a href="#img3">
+                <img src="images/jaipur.jpg" alt="Jaipur Palace">
+            </a>
+            <a href="#img4">
+                <img src="images/manali.jpg" alt="Manali Mountains">
+            </a>
+        </div>
+
+        <!-- Large Image View -->
+        <div class="large-image" id="img1">
+            <img src="images/goa.jpg" alt="Goa Beach">
+            <div class="caption">Goa Beach – Fun & Relaxation</div>
+        </div>
+
+        <div class="large-image" id="img2">
+            <img src="images/kerala.jpg" alt="Kerala Backwaters">
+            <div class="caption">Kerala Backwaters – Peaceful Nature</div>
+        </div>
+
+        <div class="large-image" id="img3">
+            <img src="images/jaipur.jpg" alt="Jaipur Palace">
+            <div class="caption">Jaipur Palace – Royal Heritage</div>
+        </div>
+
+        <div class="large-image" id="img4">
+            <img src="images/manali.jpg" alt="Manali Mountains">
+            <div class="caption">Manali – Mountains & Adventure</div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>📞 Contact Us</h2>
+        <p><strong>Email:</strong> exploreindia@gmail.com</p>
+        <p><strong>Phone:</strong> +91 98765 43210</p>
+        <p><strong>Address:</strong> Amalapuram, India</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Explore India Tourism | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
